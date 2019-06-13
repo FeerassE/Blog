@@ -6,8 +6,9 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('id', 'username', 'password')
+    
 
 class Blog_PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Blog_Post
-        fields = ('id', 'pub_date', 'user', 'content')
+        fields = ('id','title', 'pub_date', 'userid', 'content')

@@ -9,6 +9,6 @@ class User(models.Model):
 
 class Blog_Post(models.Model):
     pub_date = models.DateField(default=datetime.date.today)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    userid = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField()
     title = models.CharField(max_length=150, default="title")
